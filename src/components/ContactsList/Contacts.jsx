@@ -1,18 +1,26 @@
 import { Contact } from '../Contact/Contact'
 import styles from './Contacts.module.css'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import axios from 'axios'
 
 export const Contacts = ({ search }) => {
   const [contacts, setContacts] = useState([])
   const [filteredContacts, setFilteredContacts] = useState([])
 
+  const getContacts = async () => {
+    const { data: response } = await axios.get('http://localhost:3001/api/contacts')
+    setFilteredContacts([...response.data])
+    setContacts([...response.data])
+  }
+
+  const updateComponent = useCallback(() => {
+    getContacts()
+  }, [])
+
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = () => {
       try {
-        const {data: response} = await axios.get('http://localhost:3001/api/contacts')
-        setFilteredContacts([...response.data])
-        setContacts([...response.data])
+        getContacts()
       } catch (error) {
         console.error(error)
       }
@@ -42,7 +50,7 @@ export const Contacts = ({ search }) => {
         filteredContacts.length !== 0 ?
           <ul className={styles.listOfContacts}>
             {filteredContacts.map(contact => (
-              <Contact key={contact._id} contact={contact} />
+              <Contact key={contact._id} contact={contact} updateComponent={updateComponent} />
             ))
             }
           </ul>
