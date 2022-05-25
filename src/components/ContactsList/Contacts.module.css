@@ -2,6 +2,12 @@ ul {
     padding-left: 30px;
 }
 
+.contactsContainer {
+    overflow-y: scroll;
+    height: 60vh;
+    margin-bottom: 20px;
+}
+
 @media only screen and (min-width: 500px) {
     .contactsContainer {
         display: flex;

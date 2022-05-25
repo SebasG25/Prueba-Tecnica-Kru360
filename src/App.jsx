@@ -10,7 +10,7 @@ function App() {
     <div className='App'>
       <Routes>
         <Route path='/' element={<LandingPage />} />
-        <Route path='/edit/:contactName' element={<EditPage />} />
+        <Route path='/edit/:idContact' element={<EditPage />} />
         <Route path='/addcontact' element={<AddContactPage />} />
       </Routes>
       <Navbar />
