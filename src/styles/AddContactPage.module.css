@@ -1,0 +1,63 @@
+.addPageContainer {
+    padding: 15px;
+}
+
+.addPageTitle {
+    color: #20759f;
+    font-size: 1.4em;
+    padding: 25px;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formButtons {
+    display: flex;
+    margin-top: 13px;
+}
+
+.formInput {
+    width: 80%;
+    font-size: 1.2rem;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px 45px 5px 15px;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    border: 2px solid #969b9d;
+}
+
+.formInput:focus {
+    outline: none;
+    padding-right: 35px;
+    height: 31.5px;
+    box-shadow: 0 0 5px #1aa0e2;
+}
+
+select {
+    min-width: 95%;
+    min-height: 45px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+}
+
+@media only screen and (max-height: 720px) {
+    .formButtons {
+        margin-bottom: 60px;
+    }
+}

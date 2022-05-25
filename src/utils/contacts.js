@@ -1,41 +1,49 @@
 export const contactsList = [
     {
-        name: 'John Doe',
+        name: 'John',
+        lastname: 'Doe',
         prefix: '+57',
         number: '3001234567'
     },
     {
-        name: 'Samir Díaz',
+        name: 'Samir',
+        lastname: 'Díaz',
         prefix: '+57',
         number: '3001234567'
     },
     {
-        name: 'Camila Pacheco',
+        name: 'Camila',
+        lastname: 'Pacheco',
         prefix: '+57',
         number: '3001234567'
     },
     {
-        name: 'Luisa Hernández',
+        name: 'Luisa',
+        lastname: 'Hernández',
         prefix: '+57',
         number: '3001234567'
     },
     {
-        name: 'Aaron Mercado',
+        name: 'Aaron',
+        lastname: 'Mercado',
         prefix: '+57',
         number: '3001234567'
     },
     {
-        name: 'Yanelkis Blanco',
+        name: 'Yanelkis',
+        lastname: 'Blanco',
         prefix: '+57',
         number: '3001234567'
     },
     {
-        name: 'Gustavo Bettin',
+        name: 'Gustavo',
+        lastname: 'Bettin',
         prefix: '+57',
         number: '3001234567'
     },
     {
-        name: 'Silvia Romero',
+        name: 'Silvia',
+        lastname: 'Romero',
         prefix: '+57',
         number: '3001234567'
     }

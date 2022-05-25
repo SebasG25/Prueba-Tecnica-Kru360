@@ -12,6 +12,8 @@ export const Contacts = ({ search }) => {
       if (search) {
         const filteredArray = contacts.filter(contact =>
           contact?.name.toLowerCase().includes(search?.toLowerCase())
+          || contact?.number.includes(search)
+          || contact?.lastname.toLowerCase().includes(search?.toLowerCase())
         )
         setFilteredContacts(filteredArray)
       }
@@ -22,12 +24,17 @@ export const Contacts = ({ search }) => {
 
   return (
     <div className={styles.contactsContainer}>
-      <ul className={styles.listOfContacts}>
-        {filteredContacts.map(contact => (
-          <Contact key={contact.name} contact={contact} />
-        ))
-        }
-      </ul>
+      {
+        filteredContacts.length !== 0 ?
+          <ul className={styles.listOfContacts}>
+            {filteredContacts.map(contact => (
+              <Contact key={contact.name} contact={contact} />
+            ))
+            }
+          </ul>
+          :
+          <h3>No se encontraron contactos</h3>
+      }
     </div>
   )
 }

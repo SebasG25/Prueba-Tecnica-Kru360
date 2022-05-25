@@ -15,7 +15,3 @@
     text-decoration: none;
     position: relative;
 }
-
-.navbar__link--active {
-    border-top-color: aqua;
-}
