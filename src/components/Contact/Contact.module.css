@@ -1,0 +1,28 @@
+.contactContainer {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    margin-right: 45px;
+}
+
+.contactActions {
+    display: flex;
+    align-self: flex-end;
+}
+
+.contactName, .contactNumber {
+    margin: 0;
+}
+
+.contactNumber {
+    color: #73a6c0;
+}
+
+.actionIcon {
+    margin: 10px;
+    cursor: pointer;
+}
