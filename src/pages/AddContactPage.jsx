@@ -2,10 +2,17 @@ import styles from '../styles/AddContactPage.module.css'
 import { Button } from '../components/Button/Button'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 export const AddContactPage = () => {
   const [userData, setUserData] = useState({
+    name: '',
+    lastname: '',
+    email: '',
+    cel: '',
     prefix: '+57',
+    birth: '',
+    address: '',
     type: 'tipo1',
     origin: 'origen1'
   })
@@ -14,6 +21,11 @@ export const AddContactPage = () => {
 
   const handleInputChange = e => {
     setUserData({ ...userData, [e.target.name]: e.target.value })
+  }
+
+  const handleAddContact = () => {
+    axios.post('http://localhost:3001/api/contacts', userData)
+    navigate('/')
   }
 
   return (
@@ -59,7 +71,7 @@ export const AddContactPage = () => {
               color: '#ebebeb',
               backgroundColor: '#64cd98'
             }}
-            action={() => navigate('/')}>
+            action={handleAddContact}>
             Aceptar
           </Button>
         </div>
