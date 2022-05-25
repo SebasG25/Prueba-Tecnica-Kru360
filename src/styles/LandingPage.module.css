@@ -1,0 +1,31 @@
+.landingPageContainer {
+    height: 50rem;
+}
+
+.listTitle {
+    color: #20759f;
+    font-size: 1.3em;
+    padding: 25px;
+    margin: 0;
+}
+
+.mainContainer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.addIcon {
+    position: absolute;
+    right: 8px;
+    top: 0;
+    height: 100%;
+}
+
+@media only screen and (min-height: 712px) {
+    .landingPageContainer {
+        height: 52rem;
+    }
+}

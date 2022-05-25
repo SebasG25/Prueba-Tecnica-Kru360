@@ -13,4 +13,9 @@
     padding-right: 35px;
     cursor: pointer;
     text-decoration: none;
+    position: relative;
+}
+
+.navbar__link--active {
+    border-top-color: aqua;
 }

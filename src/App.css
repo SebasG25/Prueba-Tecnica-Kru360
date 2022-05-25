@@ -1,16 +1,4 @@
 .App {
     position: relative;
-}
-
-.addButton {
-    position: absolute;
-    right: 50%;
-    margin-right: -65px;
-}
-
-.addIcon {
-    position: absolute;
-    right: 8px;
-    top: 0;
-    height: 100%;
+    max-width: 100%;
 }

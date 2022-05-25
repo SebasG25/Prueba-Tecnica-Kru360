@@ -1,17 +1,18 @@
-import { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
+import { useSearchParams } from 'react-router-dom'
 import styles from './SearchBar.module.css'
 
 export const SearchBar = () => {
+    const [query, setQuery] = useSearchParams()
+    const search = query.get('search') ?? ''
 
-    const [search, setSearch] = useState('')
-
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
         e.preventDefault();
     }
 
-    const handleChange = e => {
-        setSearch(e.target.value)
+    const handleChangeInput = e => {
+        const text = e.target.value
+        setQuery({search: text})
     }
 
     return (
@@ -24,7 +25,7 @@ export const SearchBar = () => {
                     autoFocus
                     placeholder='Buscar'
                     aria-label='Search Bar'
-                    onChange={handleChange}
+                    onChange={handleChangeInput}
                 />
                 <FaSearch size={20} color='#5b98b6' className={styles.searchIcon} />
             </div>

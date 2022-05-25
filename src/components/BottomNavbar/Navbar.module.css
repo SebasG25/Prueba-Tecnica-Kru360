@@ -1,0 +1,22 @@
+.navbarContainer {
+    background-color: #006191;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px 25px 0 0;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarIcon {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 7px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-top: 7px solid #64cd98;
+}

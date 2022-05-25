@@ -1,5 +1,11 @@
-.listTitle {
-    color: #20759f;
-    font-size: 1.3em;
-    padding: 25px;
+ul {
+    padding-left: 30px;
+}
+
+@media only screen and (min-width: 500px) {
+    .contactsContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
